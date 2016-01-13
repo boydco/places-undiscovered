@@ -1,0 +1,19 @@
+{
+  "name": "places-undiscovered",
+  "version": "1.0.0",
+  "description": "Quiz app in JS for discovering a place to travel to that you've probably never heard of.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boydco/places-undiscovered.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boydco/places-undiscovered/issues"
+  },
+  "homepage": "https://github.com/boydco/places-undiscovered#readme"
+}

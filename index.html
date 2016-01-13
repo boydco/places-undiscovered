@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>project</title>
+    <link rel="stylesheet" href="css.styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="handlebars-v4.0.5.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <div id="questionMaster">
+      <h2>{{questionNumber}}</h2>
+      <h3>{{questionText}}</h3>
+        <ul>
+          {{#each answers}}
+          <li>{{answer}}
+          {{/each}}
+        </ul>
+    </div>
+
+    // <script type="text/javascript">
+
+    //   var questionInfo = document.getElementById("questionMaster").innerHTML
+
+    //   var template = Handlebars.compile(questionInfo)
+
+    //   var questionData = template ({
+    //     questionNumber: "Question 1",
+    //     questionText: "What is your favorite drink on holiday?",
+    //     answers: [
+    //       {answer: "local draft beer"},
+    //       {answer: "red wine"},
+    //       {answer: "cocktails"},
+    //       {answer: "water?"},
+    //       {answer: "mass produced water"}
+    //     ]
+    //   })
+
+    //   document.getElementById("questionData").innerHTML += questionData
+
+    // </script>
+
+  </body>
+
+</html>
+
+
+
+<!--
+ <script id="color-template" type="text/x-handlebars-template">
+    <div>
+      {{color}}
+      {{animal}}
+    </div>
+  </script> -->
