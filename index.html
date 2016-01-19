@@ -1,56 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>project</title>
-    <link rel="stylesheet" href="css.styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-    <script src="handlebars-v4.0.5.js"></script>
-    <script src="app.js"></script>
-  </head>
-  <body>
-    <div id="questionMaster">
-      <h2>{{questionNumber}}</h2>
-      <h3>{{questionText}}</h3>
-        <ul>
-          {{#each answers}}
-          <li>{{answer}}
-          {{/each}}
-        </ul>
-    </div>
+<html ng-app="quizApp">
+    <head>
+        <meta charset="utf-8" />
+        <title>Places Undiscovered</title>
+        <link rel="stylesheet" href="style.css" />
+        <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <script src="app.js"></script>
+    </head>
 
-    // <script type="text/javascript">
-
-    //   var questionInfo = document.getElementById("questionMaster").innerHTML
-
-    //   var template = Handlebars.compile(questionInfo)
-
-    //   var questionData = template ({
-    //     questionNumber: "Question 1",
-    //     questionText: "What is your favorite drink on holiday?",
-    //     answers: [
-    //       {answer: "local draft beer"},
-    //       {answer: "red wine"},
-    //       {answer: "cocktails"},
-    //       {answer: "water?"},
-    //       {answer: "mass produced water"}
-    //     ]
-    //   })
-
-    //   document.getElementById("questionData").innerHTML += questionData
-
-    // </script>
-
-  </body>
-
+    <body>
+        <div class="container">
+            <h1 class="title">QuizApp</h1>
+            <quiz/>
+        </div>
+    </body>
 </html>
-
-
-
-<!--
- <script id="color-template" type="text/x-handlebars-template">
-    <div>
-      {{color}}
-      {{animal}}
-    </div>
-  </script> -->
