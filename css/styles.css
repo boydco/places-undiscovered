@@ -1,9 +1,301 @@
-#questionMaster {
-      margin: 3% 43% 2%;
-      width: 300px;
-      text-align: center
+
+body {
+  background-color: #fff;
+  padding: 20px;
+  font-family: 'Helvetica', 'Arial';
 }
 
-.container {
-  margin: auto;
+#myQuiz {
+  font-family: 'Arial';
+  font-size: 16px;
+  font-weight: 400;
+  width: 650px;
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background: #000;
+  border: 10px solid #b5b3b6;
+  border-radius: 5px;
 }
+
+#myQuiz h1 {
+  font-weight: 100;
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0px;
+  position: absolute;
+  top: 25px;
+  left: 36px;
+}
+
+#myQuiz h1 span {
+  display: block;
+  font-weight: 900;
+  font-family: 'Helvetica';
+  font-size: 2.3em;
+  line-height: 65px;
+  margin-top: 5px;
+}
+
+#myQuiz h2 {
+  font-size: 3em;
+  margin: 0px;
+  font-weight: 100;
+}
+
+#myQuiz h3 {
+  font-size: 2.4em;
+  margin: 0px;
+  font-weight: 100;
+}
+
+#myQuiz p {
+  margin: 0px 0px 14px 0px;
+}
+
+#myQuiz .btn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: #c04b01;
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 6px;
+}
+
+/* PROGRESS BAR */
+
+#myQuiz .progress {
+  width: 550px;
+  position: absolute;
+  top: 174px;
+  left: 40px;
+}
+
+#myQuiz .progress div {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 20%;
+  background-color: rgba(255, 255, 255, .2);
+  transition: background-color 1s;
+}
+
+#myQuiz .progress div.on,
+#myQuiz .progress div.answered { background-color: #efbe5e; }
+
+#myQuiz .progress div.correct::after {
+}
+
+
+  /* INTRO */
+
+  #myQuiz .intro {
+    position: absolute;
+    top: 225px;
+    left: 660px;
+    width: 550px;
+  }
+
+  #myQuiz .intro p {
+   margin: 0px 0px 40px 0px;
+ }
+
+
+ /* QUESTIONS */
+
+ #myQuiz .question {
+  width: 550px;
+  position: absolute;
+  top: 225px;
+  left: 660px;
+}
+
+#myQuiz .question .text {
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+}
+
+#myQuiz .question .answer {
+  display: inline-block;
+  font-size: 1.1em;
+  width: 225px;
+  border: 2px solid rgba(238, 189, 102, .4);
+  border-radius: 6px;
+  padding:10px;
+  margin: 0px 15px 15px 0px;
+  position: relative;
+}
+
+#myQuiz .question .answer.selected {
+  border-color: #be4b16;
+}
+
+#myQuiz .question .answer.correct {
+  border-color: #459a2e;
+}
+
+#myQuiz .question .answer::after {
+  content:'';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background:  no-repeat 0px 0px;
+  background-size: 20px 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+#myQuiz .question .answer.selected::after {
+  background-image: url(../images/icon_incorrect.svg);
+}
+
+#myQuiz .question .answer.correct::after {
+  background-image: url(../images/icon_correct.svg);
+}
+
+#myQuiz .question.unanswered .answer {
+  cursor: pointer;
+}
+
+#myQuiz .question.unanswered .answer:hover {
+  background-color: rgba(238, 189, 102, .2);
+}
+
+#myQuiz .question.answered .answer {
+  cursor: default;
+}
+
+#myQuiz .question .answer.image {
+  min-height: 60px;
+  padding: -30px;
+  background-repeat: no-repeat;
+  background-position: 0px -40px;
+
+}
+
+/* FEEDBACK */
+
+#myQuiz .feedback {
+  color: #efbe5e;
+  margin-top: 50px;
+  transition: opacity 1.5s, margin-top: 1.5s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+#myQuiz .feedback .btn {
+  margin-top: 5px;
+}
+
+#myQuiz .feedback strong {
+  color: #fff;
+}
+
+#myQuiz .answered .feedback {
+  visibility: visible;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+
+/* RESULTS */
+
+#myQuiz .results {
+  position: absolute;
+  top: 225px;
+  left: 660px;
+  width: 550px;
+}
+
+#myQuiz .results .share {
+  margin-top: 40px;
+}
+
+#myQuiz .results .share a.btn {
+  margin-right: 20px;
+  padding: 9px 15px 8px 42px;
+  background-repeat: no-repeat;
+  background-position: 10px 5px;
+  background-size: 25px 25px;
+}
+
+#myQuiz .results .share a.btn.email {
+  background-color: #f0a121;
+  background-image: url(../images/icon_email.svg);
+}
+
+
+#myQuiz .results .share a.btn.twitter {
+  background-color: #59adeb;
+  background-image: url(../images/icon_twitter.svg);
+}
+
+#myQuiz .active, .#myQuiz .inactive {
+  transition: left 1.5s ease-in-out;
+}
+
+#myQuiz .active {
+  left: 40px;
+}
+
+#myQuiz .intro.inactive, #myQuiz.inactive.answered {
+  left: -1350px;
+}
+
+
+
+/*
+body {
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Helvetica', 'Arial';
+}
+
+
+h2 {
+  font-weight: normal;
+  font-size: 18px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.container {
+  width: 480px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#options {
+  margin: 10px 0;
+}
+
+.next-question {
+  margin-right: 10px;
+}
+
+#score {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+REDO #myquiz background with: background: #000 url(../earthgeo.jpg) no-repeat 0px 0px;;
+*/

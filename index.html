@@ -1,20 +1,66 @@
 <!DOCTYPE html>
 <html ng-app="quizApp">
     <head>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Places Undiscovered</title>
-        <link rel="stylesheet" href="style.css" />
-        <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script>
+        <link rel="stylesheet" href="css/styles.css" />
+
+        <script src="/node_modules/angular/angular.js"></script>
         <script src="app.js"></script>
     </head>
 
     <body>
-        <div class="container">
-            <h1 class="title">QuizApp</h1>
-            <quiz/>
+        <div id="myQuiz" ng-controller="QuizController">
+            <h1>Geography Test: Are you smarter than an <span>american?</span></h1>
+            <div class="progress">
+                <div class="
+                    {{ ($index === activeQuestion) ? 'on' : 'off' }},
+                    {{ (myQuestion.questionState === 'answered') ? 'answered' : 'unanswered' }}
+                    {{ (myQuestion.correctness === 'correct') ? 'correct' : 'incorrect' }}"
+                    ng-repeat="myQuestion in myQuestions">
+                </div>
+            </div>
+            <div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active'}}">
+                <h2>Welcome</h2>
+                <p>click start to begin the quiz</p>
+                <p class="btn" ng-click="activeQuestion = 0">start</p>
+            </div>
+            <div class="question
+                {{ $index === activeQuestion ? 'active' : 'inactive' }}
+                {{ myQuestion.questionState === 'answered' ? 'answered' : 'unanswered' }}"
+                ng-repeat="myQuestion in myQuestions">
+                <p class="text">{{myQuestion.question}}</p>
+                <p class="answer"
+                    ng-class="{
+                                image:Answer.image,
+                                selected:isSelected($parent.$index, $index),
+                                correct:isCorrect($parent.$index, $index)
+                            }"
+                    ng-style="{ 'background-image':'url({{Answer.image}})' }"
+                    ng-click="selectAnswer($parent.$index, $index)"
+                    ng-repeat="Answer in myQuestions[$index].answers">
+                    {{Answer.text}}
+                </p>
+                <div class="feedback">
+                    <p ng-show="myQuestion.correctness === 'correct'">Way to go! You are <strong>correct!<strong></p>
+                    <p ng-show="myQuestion.correctness === 'incorrect'">Mate! It seems you're wrong!</p>
+                    <p>{{myQuestion.feedback}}</p>
+                    <div class='btn' ng-click="selectContinue()">Continue</div>
+                </div>
+            </div>
+            <div class="results {{ (totalQuestions === activeQuestion) ? 'active' : 'inactive' }}">
+                <h3>Results</h3>
+                <p>You scored {{percentage}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.</p>
+                <p>Use the links below to challenge a friend!</p>
+                <div class="share" ng-bind-html="createShareLinks(percentage)"></div>
+            </div>
         </div>
+        <script src="/node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="app.js"></script>
     </body>
 </html>
+
+<!-- <link src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+        <script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> -->
