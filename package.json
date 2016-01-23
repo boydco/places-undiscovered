@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/boydco/places-undiscovered/issues"
   },
-  "homepage": "https://github.com/boydco/places-undiscovered#readme"
+  "homepage": "https://github.com/boydco/places-undiscovered#readme",
+  "dependencies": {
+    "mustache": "^2.2.1"
+  },
+  "devDependencies": {
+    "mustache": "^2.2.1"
+  }
 }
