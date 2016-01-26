@@ -11,28 +11,8 @@
       $scope.percentage = 0
 
       $http.get('quiz_data.json').then(function(quizData){
-        // $scope.questionBucket = function() {
-        //   return quizData.data[Math.floor(Math.random() * quizData.data.length)]
-        //
-        // }
-
-
         $scope.allQuestions = quizData.data
-
-        var questionBucket = $scope.allQuestions
-        console.log(questionBucket)
-
-        $scope.myQuestions = _.sampleSize(questionBucket, 10)
-        console.log($scope.myQuestions)
-        // $scope.myQuestions = function(questionBucket) {
-        //   return _.sampleSize(questionBucket, 10)
-        // }
-        //
-        //
-        // $scope.myQuestions = quizData.data
-        // console.log(_.sample([1, 3, 4]))
-
-
+        $scope.myQuestions = _.sampleSize($scope.allQuestions, 10)
         $scope.totalQuestions = $scope.myQuestions.length
       })
 

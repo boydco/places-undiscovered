@@ -1,6 +1,7 @@
 
 body {
   background-color: #fff;
+  background-image:
   padding: 20px;
   font-family: 'Helvetica', 'Arial';
 }
@@ -11,6 +12,8 @@ body {
   font-weight: 400;
   width: 650px;
   height: 650px;
+  margin: auto;
+  margin-top: 50px;
   position: relative;
   overflow: hidden;
   color: #fff;
@@ -226,13 +229,13 @@ body {
 
 #myQuiz .results .share a.btn.email {
   background-color: #f0a121;
-  background-image: url(../images/icon_email.svg);
+  background-image: url(../images/icon_email.png);
 }
 
 
 #myQuiz .results .share a.btn.twitter {
   background-color: #59adeb;
-  background-image: url(../images/icon_twitter.svg);
+  background-image: url(../images/twitter-logo-white.png);
 }
 
 #myQuiz .active, .#myQuiz .inactive {

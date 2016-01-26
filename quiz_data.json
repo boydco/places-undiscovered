@@ -32,12 +32,12 @@
   {
     "question": "Which city is the furthest north?",
     "answers": [
-      {"id":0, "image":"images/chicago.jpg"},
-      {"id":1, "image":"images/nyc.jpg"},
-      {"id":2, "image":"images/la.jpg"},
-      {"id":3, "image":"images/seattle.jpg"}
+      {"id":0, "text":"Chicago"},
+      {"id":1, "text":"New York City"},
+      {"id":2, "text":"Seattle"},
+      {"id":3, "text":"Minneapolis"}
     ],
-    "correct": 3
+    "correct": 2
   },
   {
     "question": "Which two states do the Great Smoky Mountains straddle?",
@@ -105,7 +105,7 @@
       {"id":0, "text":"True"},
       {"id":1, "text":"False"}
     ],
-    "correct": 1
+    "correct": 0
   },
   {
     "question": "Which US state has the lowest population?",
@@ -126,7 +126,7 @@
     "correct": 0
   },
   {
-    "question": "Which continential US state has the largest length of coastline?",
+    "question": "Which continental US state has the largest length of coastline?",
     "answers": [
       {"id":0, "text":"Florida"},
       {"id":1, "text":"California"},
@@ -141,8 +141,8 @@
       {"id":0, "text":"New Hampshire"},
       {"id":1, "text":"Hawaii"},
       {"id":2, "text":"Connecticut"},
-      {"id":3, "text":"Vermont"}
+      {"id":3, "text":"Delaware"}
     ],
-    "correct": 0
+    "correct": 3
   }
 ]

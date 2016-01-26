@@ -13,7 +13,7 @@
 
     <body>
         <div id="myQuiz" ng-controller="QuizController">
-            <h1>Geography Test: Are you smarter than an <span>american?</span></h1>
+            <h1>Geography Quiz: Are you smarter than an <span>american?</span></h1>
             <div class="progress">
                 <div class="
                     {{ ($index === activeQuestion) ? 'on' : 'off' }},
@@ -23,9 +23,9 @@
                 </div>
             </div>
             <div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active'}}">
-                <h2>Welcome</h2>
-                <p>click start to begin the quiz</p>
-                <p class="btn" ng-click="activeQuestion = 0">start</p>
+                <h2></h2><br />
+                <p>Test your skills and see if you know American geography by clicking below.</p>
+                <p class="btn" ng-click="activeQuestion = 0">Begin</p>
             </div>
             <div class="question
                 {{ $index === activeQuestion ? 'active' : 'inactive' }}
@@ -45,7 +45,7 @@
                 </p>
                 <div class="feedback">
                     <p ng-show="myQuestion.correctness === 'correct'">Way to go! You are <strong>correct!<strong></p>
-                    <p ng-show="myQuestion.correctness === 'incorrect'">Mate! It seems you're wrong!</p>
+                    <p ng-show="myQuestion.correctness === 'incorrect'">Sorry mate, seems you're wrong!</p>
                     <p>{{myQuestion.feedback}}</p>
                     <div class='btn' ng-click="selectContinue()">Continue</div>
                 </div>
@@ -53,7 +53,7 @@
             <div class="results {{ (totalQuestions === activeQuestion) ? 'active' : 'inactive' }}">
                 <h3>Results</h3>
                 <p>You scored {{percentage}}% by correctly answering {{score}} of the total {{totalQuestions}} questions.</p>
-                <p>Use the links below to challenge a friend!</p>
+                <p>Share your results a friend!</p>
                 <div class="share" ng-bind-html="createShareLinks(percentage)"></div>
             </div>
         </div>
