@@ -13,7 +13,7 @@
 
     <body>
         <div id="myQuiz" ng-controller="QuizController">
-            <h1>Geography Quiz: Are you smarter than an <span>american?</span></h1>
+            <h1>Geography Quiz: <br />How well do you know <span>america?</span></h1>
             <div class="progress">
                 <div class="
                     {{ ($index === activeQuestion) ? 'on' : 'off' }},
@@ -24,7 +24,7 @@
             </div>
             <div class="intro {{ (activeQuestion > -1) ? 'inactive' : 'active'}}">
                 <h2></h2><br />
-                <p>Test your skills and see if you know American geography by clicking below.</p>
+                <p>Test your skills and see how well you know American geography by clicking below.</p>
                 <p class="btn" ng-click="activeQuestion = 0">Begin</p>
             </div>
             <div class="question

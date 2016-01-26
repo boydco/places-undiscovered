@@ -10,6 +10,10 @@
       $scope.activeQuestionAnswered = 0
       $scope.percentage = 0
 
+      $scope.reset = function() {
+        
+      }
+
       $http.get('quiz_data.json').then(function(quizData){
         $scope.allQuestions = quizData.data
         $scope.myQuestions = _.sampleSize($scope.allQuestions, 10)
@@ -59,6 +63,8 @@
       }
 
     }])
+
+
 })()
 
 

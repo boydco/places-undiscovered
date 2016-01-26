@@ -1,7 +1,8 @@
 
+
 body {
-  background-color: #fff;
-  background-image:
+  background-image: url(../images/white-brick-wall.png);
+  background-size: cover;
   padding: 20px;
   font-family: 'Helvetica', 'Arial';
 }
@@ -17,7 +18,7 @@ body {
   position: relative;
   overflow: hidden;
   color: #fff;
-  background: #000;
+  background: rgba(0, 0, 0, 0.9);
   border: 10px solid #b5b3b6;
   border-radius: 5px;
 }
@@ -60,7 +61,7 @@ body {
 #myQuiz .btn {
   display: inline-block;
   cursor: pointer;
-  background-color: #c04b01;
+  background-color: #276E29;
   color: #fff;
   text-decoration: none;
   padding: 5px 15px;

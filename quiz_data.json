@@ -144,5 +144,105 @@
       {"id":3, "text":"Delaware"}
     ],
     "correct": 3
+  },
+  {
+    "question": "Which Great Lake does not border on Canada?",
+    "answers": [
+      {"id":0, "text":"Lake Michigan"},
+      {"id":1, "text":"Lake Ontario"},
+      {"id":2, "text":"Lake Erie"},
+      {"id":3, "text":"Lake Huron"}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "The source of the Missouri River is in what State?",
+    "answers": [
+      {"id":0, "text":"Wisconsin"},
+      {"id":1, "text":"Minnesota"},
+      {"id":2, "text":"Montana"},
+      {"id":3, "text":"North Dakota"}
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which state capital city is situated at the highest elevation of any state capital in the USA?",
+    "answers": [
+      {"id":0, "text":"Denver, CO"},
+      {"id":1, "text":"Santa Fe, NM"},
+      {"id":2, "text":"Cheyenne, WY"},
+      {"id":3, "text":"Salt Lake City, UT"}
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Someone traveling from Reno, NV, straight (“as the crow flies”) to Los Angeles, CA, would be going in what direction?",
+    "answers": [
+      {"id":0, "text":"Northwest"},
+      {"id":1, "text":"Southwest"},
+      {"id":2, "text":"Southeast"},
+      {"id":3, "text":"West"}
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the southern-most state?",
+    "answers": [
+      {"id":0, "text":"Florida"},
+      {"id":1, "text":"Texas"},
+      {"id":2, "text":"Hawaii"},
+      {"id":3, "text":"California"}
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which state is west of the Mississippi River?",
+    "answers": [
+      {"id":0, "text":"Wisconsin"},
+      {"id":1, "text":"Iowa"},
+      {"id":2, "text":"Illinois"},
+      {"id":3, "text":"Mississippi"}
+    ],
+    "correct": 1
+  },
+  {
+    "question": "The geographical center of the 48 contiguous states (that is, excluding Alaska and Hawaii) is located in what state?",
+    "answers": [
+      {"id":0, "text":"Kansas"},
+      {"id":1, "text":"Nebraska"},
+      {"id":2, "text":"Missouri"},
+      {"id":3, "text":"Oklahoma"}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which state does not border on the Gulf of Mexico?",
+    "answers": [
+      {"id":0, "text":"Florida"},
+      {"id":1, "text":"Alabama"},
+      {"id":2, "text":"Texas"},
+      {"id":3, "text":"Georgia"}
+    ],
+    "correct": 3
+  },
+  {
+    "question": "The 45th Parallel of Latitude, halfway between the north pole and the equator, does not pass through which state?",
+    "answers": [
+      {"id":0, "text":"Maine"},
+      {"id":1, "text":"Oregon"},
+      {"id":2, "text":"Wyoming"},
+      {"id":3, "text":"Michigan"}
+    ],
+    "correct": 2
+  },
+  {
+    "question": "Which of the following states was not part of the original 13 colonies?",
+    "answers": [
+      {"id":0, "text":"New Hampshire"},
+      {"id":1, "text":"Vermont"},
+      {"id":2, "text":"Georgia"},
+      {"id":3, "text":"South Carolina"}
+    ],
+    "correct": 1
   }
 ]
