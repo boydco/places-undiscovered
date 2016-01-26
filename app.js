@@ -1,3 +1,4 @@
+
 (function () {
 
     var app = angular.module('quizApp', [])
@@ -10,9 +11,31 @@
       $scope.percentage = 0
 
       $http.get('quiz_data.json').then(function(quizData){
-        $scope.myQuestions = quizData.data
+        // $scope.questionBucket = function() {
+        //   return quizData.data[Math.floor(Math.random() * quizData.data.length)]
+        //
+        // }
+
+
+        $scope.allQuestions = quizData.data
+
+        var questionBucket = $scope.allQuestions
+        console.log(questionBucket)
+
+        $scope.myQuestions = _.sampleSize(questionBucket, 10)
+        console.log($scope.myQuestions)
+        // $scope.myQuestions = function(questionBucket) {
+        //   return _.sampleSize(questionBucket, 10)
+        // }
+        //
+        //
+        // $scope.myQuestions = quizData.data
+        // console.log(_.sample([1, 3, 4]))
+
+
         $scope.totalQuestions = $scope.myQuestions.length
       })
+
 
       $scope.selectAnswer = function(qIndex, aIndex){
 
@@ -157,4 +180,3 @@
 //     }
 //   };
 // });
-

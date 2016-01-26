@@ -98,5 +98,51 @@
       {"id":3, "text":"Denver"}
     ],
     "correct": 0
+  },
+  {
+    "question": "The state of Oregon is larger than the United Kingdom by land area",
+    "answers": [
+      {"id":0, "text":"True"},
+      {"id":1, "text":"False"}
+    ],
+    "correct": 1
+  },
+  {
+    "question": "Which US state has the lowest population?",
+    "answers": [
+      {"id":0, "text":"Wyoming"},
+      {"id":1, "text":"Rhode Island"},
+      {"id":2, "text":"Vermont"},
+      {"id":3, "text":"Alaska"}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which has a higher population, Alaska or Washington D.C.?",
+    "answers": [
+      {"id":0, "text":"Alaska"},
+      {"id":1, "text":"DC"}
+    ],
+    "correct": 0
+  },
+  {
+    "question": "Which continential US state has the largest length of coastline?",
+    "answers": [
+      {"id":0, "text":"Florida"},
+      {"id":1, "text":"California"},
+      {"id":2, "text":"Michigan"},
+      {"id":3, "text":"Louisiana"}
+    ],
+    "correct": 2
+  },
+  {
+    "question": "What is the second smallest state in America by land area?",
+    "answers": [
+      {"id":0, "text":"New Hampshire"},
+      {"id":1, "text":"Hawaii"},
+      {"id":2, "text":"Connecticut"},
+      {"id":3, "text":"Vermont"}
+    ],
+    "correct": 0
   }
 ]

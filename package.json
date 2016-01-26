@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/boydco/places-undiscovered#readme",
   "dependencies": {
+    "lodash": "^4.0.1",
     "mustache": "^2.2.1"
   },
   "devDependencies": {
